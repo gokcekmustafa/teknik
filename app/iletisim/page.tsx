@@ -2,13 +2,37 @@
 
 import { useState } from 'react';
 
+const ACCESS_KEY = 'c487cfcb-24cc-45e3-a0e7-2e3d4e44d991';
+
 export default function IletisimPage() {
   const [form, setForm] = useState({ name: '', phone: '', email: '', message: '' });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError('');
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        access_key: ACCESS_KEY,
+        subject: 'İletişim Formu - Profesyonel Teknik',
+        from_name: form.name,
+        name: form.name,
+        phone: form.phone,
+        email: form.email,
+        message: form.message,
+      }),
+    });
+    setLoading(false);
+    if (res.ok) {
+      setSubmitted(true);
+    } else {
+      setError('Gönderilirken bir hata oluştu. Lütfen tekrar deneyin.');
+    }
   };
 
   return (
@@ -73,11 +97,13 @@ export default function IletisimPage() {
                       onChange={(e) => setForm({...form, message: e.target.value})}
                     />
                   </div>
+                  {error && <p className="text-red-500 text-xs font-semibold">{error}</p>}
                   <button
                     type="submit"
-                    className="px-8 py-3.5 bg-amber-500 hover:bg-amber-600 text-zinc-950 font-black text-xs uppercase tracking-wider rounded-xl transition-all shadow-lg shadow-amber-500/20 hover:shadow-xl hover:shadow-amber-500/30 hover:-translate-y-0.5"
+                    disabled={loading}
+                    className="px-8 py-3.5 bg-amber-500 hover:bg-amber-600 disabled:opacity-50 disabled:cursor-not-allowed text-zinc-950 font-black text-xs uppercase tracking-wider rounded-xl transition-all shadow-lg shadow-amber-500/20 hover:shadow-xl hover:shadow-amber-500/30 hover:-translate-y-0.5"
                   >
-                    Mesajı Gönder
+                    {loading ? 'Gönderiliyor...' : 'Mesajı Gönder'}
                   </button>
                 </form>
               ) : (

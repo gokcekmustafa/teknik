@@ -3,12 +3,16 @@
 import { useState } from 'react';
 import { services } from '@/app/data/services';
 
+const ACCESS_KEY = 'c487cfcb-24cc-45e3-a0e7-2e3d4e44d991';
+
 export default function KesifAsistaniPage() {
   const [step, setStep] = useState(1);
   const [propertyType, setPropertyType] = useState('');
   const [selectedServices, setSelectedServices] = useState<string[]>([]);
   const [clientInfo, setClientInfo] = useState({ name: '', phone: '', note: '' });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const allServiceItems = services.flatMap(s => s.items.map(i => i.title));
 
@@ -30,9 +34,30 @@ export default function KesifAsistaniPage() {
     setStep(step - 1);
   };
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setLoading(true);
+    setError('');
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        access_key: ACCESS_KEY,
+        subject: 'Keşif Talebi - Profesyonel Teknik',
+        from_name: clientInfo.name,
+        name: clientInfo.name,
+        phone: clientInfo.phone,
+        'Mülk Tipi': propertyType === 'villa' ? 'Villa / Müstakil Ev' : 'Daire / Apartman',
+        'Seçilen Hizmetler': selectedServices.join(', '),
+        'Ek Not': clientInfo.note,
+      }),
+    });
+    setLoading(false);
+    if (res.ok) {
+      setIsSubmitted(true);
+    } else {
+      setError('Gönderilirken bir hata oluştu. Lütfen tekrar deneyin.');
+    }
   };
 
   const resetWizard = () => {
@@ -188,9 +213,10 @@ export default function KesifAsistaniPage() {
                       <label className="block text-xs font-black text-zinc-500 uppercase tracking-wider mb-2">Varsa Eklemek İstediğiniz Notlar</label>
                       <textarea rows={3} className="w-full bg-white border border-zinc-200 rounded-xl px-4 py-3.5 text-sm focus:outline-none focus:border-amber-500 focus:ring-2 focus:ring-amber-500/10 transition-all resize-none placeholder:text-zinc-300" placeholder="Mülkün konumu, teslim süresi beklentiniz..." value={clientInfo.note} onChange={(e) => setClientInfo({...clientInfo, note: e.target.value})} />
                     </div>
+                    {error && <p className="text-red-500 text-xs font-semibold mb-4">{error}</p>}
                     <div className="mt-8 flex justify-between items-center">
-                      <button type="button" onClick={handlePrevStep} className="px-5 py-3 border border-zinc-200 text-zinc-700 font-bold text-xs uppercase tracking-wider rounded-lg hover:bg-zinc-50 hover:shadow-sm transition-all">← Geri</button>
-                      <button type="submit" className="px-8 py-3.5 bg-amber-500 hover:bg-amber-600 text-zinc-950 font-black text-xs uppercase tracking-wider rounded-lg transition-all shadow-lg shadow-amber-500/20 hover:shadow-xl hover:shadow-amber-500/30 hover:-translate-y-0.5">Keşif Talebini Gönder</button>
+                      <button type="button" onClick={handlePrevStep} disabled={loading} className="px-5 py-3 border border-zinc-200 text-zinc-700 font-bold text-xs uppercase tracking-wider rounded-lg hover:bg-zinc-50 hover:shadow-sm transition-all disabled:opacity-50">← Geri</button>
+                      <button type="submit" disabled={loading} className="px-8 py-3.5 bg-amber-500 hover:bg-amber-600 disabled:opacity-50 disabled:cursor-not-allowed text-zinc-950 font-black text-xs uppercase tracking-wider rounded-lg transition-all shadow-lg shadow-amber-500/20 hover:shadow-xl hover:shadow-amber-500/30 hover:-translate-y-0.5">{loading ? 'Gönderiliyor...' : 'Keşif Talebini Gönder'}</button>
                     </div>
                   </form>
                 )}
