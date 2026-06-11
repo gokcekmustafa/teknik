@@ -129,10 +129,10 @@ export default function YenilemeIzolasyonPage() {
               Keşif Asistanını Başlat
             </Link>
             <a
-              href="tel:+905405250050"
+              href="tel:+905387931938"
               className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-bold rounded-lg transition-all hover:-translate-y-0.5 text-center text-sm"
             >
-              0540 525 00 50
+              0538 793 19 38
             </a>
           </div>
         </div>

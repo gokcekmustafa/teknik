@@ -16,7 +16,7 @@ export default function Header() {
           </span>
           <div className="flex items-center gap-3 sm:gap-6 text-center">
             <span className="text-zinc-400">Haftanın 6 Günü: 09:00 - 19:00</span>
-            <a href="tel:+905405250050" className="text-amber-400 hover:text-amber-300 font-bold tracking-wide whitespace-nowrap">☎ 0540 525 00 50</a>
+            <a href="tel:+905387931938" className="text-amber-400 hover:text-amber-300 font-bold tracking-wide whitespace-nowrap">☎ 0538 793 19 38</a>
           </div>
         </div>
       </div>

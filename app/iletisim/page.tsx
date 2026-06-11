@@ -161,7 +161,7 @@ export default function IletisimPage() {
                       </div>
                       <div>
                         <span className="block text-xs font-bold text-zinc-500 uppercase tracking-wider">Mobil</span>
-                        <a href="tel:+905405250050" className="text-sm text-zinc-800 font-medium hover:text-amber-500 transition">0540 525 00 50</a>
+                        <a href="tel:+905387931938" className="text-sm text-zinc-800 font-medium hover:text-amber-500 transition">0538 793 19 38</a>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
