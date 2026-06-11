@@ -13,7 +13,7 @@ export default function IletisimPage() {
 
   return (
     <div className="min-h-screen bg-zinc-50 text-zinc-900 antialiased font-sans">
-      <section className="relative bg-gradient-to-br from-[#2d3140] via-[#353a4e] to-[#1e2133] text-white overflow-hidden py-20 border-b-4 border-amber-500">
+      <section className="relative bg-gradient-to-br from-[#2d3140] via-[#353a4e] to-[#1e2133] text-white overflow-hidden py-16 sm:py-20 border-b-4 border-amber-500">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.03)_0%,_transparent_50%)] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <span className="text-xs font-bold text-amber-400 uppercase tracking-widest">İletişim</span>
@@ -24,7 +24,7 @@ export default function IletisimPage() {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-16 sm:py-20">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
             <div className="lg:col-span-3">

@@ -50,7 +50,7 @@ const steps = [
 export default function NasilCalisirPage() {
   return (
     <div className="min-h-screen bg-zinc-50 text-zinc-900 antialiased font-sans">
-      <section className="bg-gradient-to-br from-[#2d3140] via-[#353a4e] to-[#1e2133] text-white py-20 border-b-4 border-amber-500">
+      <section className="bg-gradient-to-br from-[#2d3140] via-[#353a4e] to-[#1e2133] text-white py-16 sm:py-20 border-b-4 border-amber-500">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <span className="text-xs font-bold text-amber-400 uppercase tracking-widest">Çalışma Disiplinimiz</span>
           <h1 className="text-4xl sm:text-5xl font-black tracking-tight mt-2">Süreç Nasıl İlerler?</h1>
@@ -60,7 +60,7 @@ export default function NasilCalisirPage() {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-16 sm:py-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="relative">
             <div className="absolute left-8 top-0 bottom-0 w-px bg-zinc-200 hidden md:block" />
@@ -106,7 +106,7 @@ export default function NasilCalisirPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-white border-t border-b border-zinc-100">
+      <section className="py-16 sm:py-20 bg-white border-t border-b border-zinc-100">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <span className="text-xs font-bold text-amber-500 uppercase tracking-widest">Neden Farklıyız?</span>
@@ -129,7 +129,7 @@ export default function NasilCalisirPage() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-[#2d3140] to-[#1e2133] text-white">
+      <section className="py-16 sm:py-20 bg-gradient-to-br from-[#2d3140] to-[#1e2133] text-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-black uppercase tracking-wide">Hemen Başlayalım</h2>
           <p className="mt-4 text-zinc-300 text-sm">İhtiyaçlarınızı bize bildirin, biz sürecin geri kalanını yönetelim.</p>

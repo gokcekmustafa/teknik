@@ -6,7 +6,7 @@ import { services } from '@/app/data/services';
 export default function HizmetlerPage() {
   return (
     <div className="min-h-screen bg-zinc-50 text-zinc-900 antialiased font-sans">
-      <div className="bg-gradient-to-br from-[#2d3140] via-[#353a4e] to-[#1e2133] text-white py-20 border-b-4 border-amber-500">
+      <div className="bg-gradient-to-br from-[#2d3140] via-[#353a4e] to-[#1e2133] text-white py-16 sm:py-20 border-b-4 border-amber-500">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.03)_0%,_transparent_50%)] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <span className="text-xs font-bold text-amber-400 uppercase tracking-widest">Neler Yapıyoruz?</span>
@@ -17,7 +17,7 @@ export default function HizmetlerPage() {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {services.map((service) => (
             <Link

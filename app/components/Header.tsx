@@ -8,15 +8,15 @@ export default function Header() {
 
   return (
     <header>
-      <div className="bg-[#2d3140] text-zinc-300 text-xs py-2.5 px-4 sm:px-6 lg:px-8 border-b border-[#3a3f52]">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-          <span className="flex items-center gap-1.5">
-            <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
+      <div className="bg-[#2d3140] text-zinc-300 text-[10px] sm:text-xs py-3 px-4 sm:px-6 lg:px-8 border-b border-[#3a3f52]">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-1.5 sm:gap-2">
+          <span className="flex items-center gap-1.5 text-center sm:text-left">
+            <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-amber-500 animate-pulse flex-shrink-0" />
             Uzman Kadro ile Villa ve Dairelere Garantili Teknik Servis
           </span>
-          <div className="flex items-center gap-6">
-            <span>Haftanın 6 Günü: 09:00 - 19:00</span>
-            <a href="tel:+905405250050" className="text-amber-500 hover:underline">Destek: 0540 525 00 50</a>
+          <div className="flex items-center gap-3 sm:gap-6 text-center">
+            <span className="text-zinc-400">Haftanın 6 Günü: 09:00 - 19:00</span>
+            <a href="tel:+905405250050" className="text-amber-400 hover:text-amber-300 font-bold tracking-wide whitespace-nowrap">☎ 0540 525 00 50</a>
           </div>
         </div>
       </div>
@@ -33,7 +33,7 @@ export default function Header() {
                     G
                   </div>
                 </div>
-                <span className="text-2xl font-black tracking-tight text-zinc-900">
+                <span className="text-xl sm:text-2xl font-black tracking-tight text-zinc-900">
                   Profesyonel<span className="text-amber-500 font-bold ml-0.5">TEKNİK</span>
                 </span>
               </Link>
@@ -57,9 +57,10 @@ export default function Header() {
             <div className="flex items-center md:hidden">
               <button
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="text-zinc-800 hover:text-amber-500 focus:outline-none"
+                className="text-zinc-800 hover:text-amber-500 focus:outline-none p-2 -mr-2"
+                aria-label="Menüyü aç/kapat"
               >
-                <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg className="h-7 w-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   {isMobileMenuOpen ? (
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
                   ) : (
@@ -72,14 +73,14 @@ export default function Header() {
         </div>
 
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-white/95 backdrop-blur-xl border-b border-zinc-200/50 px-4 pt-2 pb-6 space-y-3 shadow-lg animate-slide-down">
-            <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 font-medium text-zinc-700 hover:text-amber-500">Anasayfa</Link>
-            <Link href="/hizmetler" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 font-medium text-zinc-700 hover:text-amber-500">Hizmetlerimiz</Link>
-            <Link href="/hakkimizda" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 font-medium text-zinc-700 hover:text-amber-500">Hakkımızda</Link>
-            <Link href="/nasil-calisir" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 font-medium text-zinc-700 hover:text-amber-500">Nasıl Çalışırız?</Link>
-            <Link href="/kesif-asistani" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 font-medium text-zinc-700 hover:text-amber-500">Akıllı Keşif</Link>
-            <Link href="/iletisim" onClick={() => setIsMobileMenuOpen(false)} className="block py-2 font-medium text-zinc-700 hover:text-amber-500">İletişim</Link>
-            <a href="https://wa.me/905405250050" className="block text-center bg-[#25D366] hover:bg-[#1ebe57] text-white border border-[#1ebe57] py-3 rounded-xl font-bold">WhatsApp Canlı Destek</a>
+          <div className="md:hidden bg-white/95 backdrop-blur-xl border-b border-zinc-200/50 px-4 pt-3 pb-8 space-y-1 shadow-lg animate-slide-down">
+            <Link href="/" onClick={() => setIsMobileMenuOpen(false)} className="block py-3.5 px-3 font-semibold text-zinc-700 hover:text-amber-500 hover:bg-zinc-50 rounded-lg transition-all">Anasayfa</Link>
+            <Link href="/hizmetler" onClick={() => setIsMobileMenuOpen(false)} className="block py-3.5 px-3 font-semibold text-zinc-700 hover:text-amber-500 hover:bg-zinc-50 rounded-lg transition-all">Hizmetlerimiz</Link>
+            <Link href="/hakkimizda" onClick={() => setIsMobileMenuOpen(false)} className="block py-3.5 px-3 font-semibold text-zinc-700 hover:text-amber-500 hover:bg-zinc-50 rounded-lg transition-all">Hakkımızda</Link>
+            <Link href="/nasil-calisir" onClick={() => setIsMobileMenuOpen(false)} className="block py-3.5 px-3 font-semibold text-zinc-700 hover:text-amber-500 hover:bg-zinc-50 rounded-lg transition-all">Nasıl Çalışırız?</Link>
+            <Link href="/kesif-asistani" onClick={() => setIsMobileMenuOpen(false)} className="block py-3.5 px-3 font-semibold text-zinc-700 hover:text-amber-500 hover:bg-zinc-50 rounded-lg transition-all">Akıllı Keşif</Link>
+            <Link href="/iletisim" onClick={() => setIsMobileMenuOpen(false)} className="block py-3.5 px-3 font-semibold text-zinc-700 hover:text-amber-500 hover:bg-zinc-50 rounded-lg transition-all">İletişim</Link>
+            <a href="https://wa.me/905405250050" className="block text-center bg-[#25D366] hover:bg-[#1ebe57] text-white border border-[#1ebe57] py-4 rounded-xl font-bold mt-3">WhatsApp Canlı Destek</a>
           </div>
         )}
       </nav>

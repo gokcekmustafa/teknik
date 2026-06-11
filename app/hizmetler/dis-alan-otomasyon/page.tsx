@@ -19,7 +19,7 @@ export default function DisAlanOtomasyonPage() {
 
   return (
     <div className="min-h-screen bg-zinc-50 text-zinc-900 antialiased font-sans">
-      <section className="relative bg-gradient-to-br from-[#2d3140] via-[#353a4e] to-[#1e2133] text-white overflow-hidden py-20 border-b-4 border-amber-500">
+      <section className="relative bg-gradient-to-br from-[#2d3140] via-[#353a4e] to-[#1e2133] text-white overflow-hidden py-16 sm:py-20 border-b-4 border-amber-500">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(245,158,11,0.08)_0%,_transparent_50%)] pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="flex items-center gap-3 mb-4">
@@ -51,7 +51,7 @@ export default function DisAlanOtomasyonPage() {
         </div>
       </section>
 
-      <section className="py-20">
+      <section className="py-16 sm:py-20">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
           {service.items.map((item, idx) => (
             <div

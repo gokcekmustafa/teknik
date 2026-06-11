@@ -99,7 +99,7 @@ export default function App() {
 
 
       {/* */}
-      <header className="relative bg-gradient-to-br from-[#2d3140] via-[#353a4e] to-[#1e2133] text-white overflow-hidden py-20 lg:py-28 border-b-4 border-amber-500">
+      <header className="relative bg-gradient-to-br from-[#2d3140] via-[#353a4e] to-[#1e2133] text-white overflow-hidden py-16 sm:py-20 lg:py-28 border-b-4 border-amber-500">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(255,255,255,0.03)_0%,_transparent_50%)] pointer-events-none" />
         <div className="absolute right-0 top-0 h-full w-1/3 bg-[#3a3f52]/40 transform skew-x-12 pointer-events-none hidden lg:block" />
         <div className="absolute right-1/4 top-0 h-full w-1/12 bg-amber-500/10 transform skew-x-12 pointer-events-none hidden lg:block" />
@@ -112,7 +112,7 @@ export default function App() {
               <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded bg-white/5 border border-white/10 text-xs font-bold text-amber-400 uppercase tracking-widest mb-6 animate-fade-in-up">
                 <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" /> Profesyonel Teknik Çözümler
               </span>
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight animate-fade-in-up animate-delay-100">
+              <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight animate-fade-in-up animate-delay-100">
                 Mülkünüzün Tüm <br />
                 Teknik İşleri <span className="text-amber-500">Tek Elden Güvende.</span>
               </h1>
@@ -134,7 +134,7 @@ export default function App() {
             </div>
 
             <div className="lg:col-span-5">
-              <div className="bg-white/5 backdrop-blur-sm p-8 rounded-lg border border-white/10 shadow-2xl relative overflow-hidden animate-scale-in animate-delay-300">
+              <div className="bg-white/5 backdrop-blur-sm p-6 sm:p-8 rounded-lg border border-white/10 shadow-2xl relative overflow-hidden animate-scale-in animate-delay-300">
                 <div className="absolute -right-10 -bottom-10 w-40 h-40 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
                 <div className="absolute -left-10 -top-10 w-40 h-40 bg-white/5 rounded-full blur-3xl pointer-events-none" />
                 <h3 className="text-xl font-extrabold text-white mb-6 tracking-wide uppercase">Kurumsal Kalite Güvencesi</h3>
@@ -151,8 +151,8 @@ export default function App() {
                   <div className="flex gap-4 group">
                     <div className="w-10 h-10 rounded-lg bg-white/10 border border-white/10 flex items-center justify-center text-amber-400 font-bold shrink-0 group-hover:bg-amber-500 group-hover:text-zinc-950 transition-all duration-300">2</div>
                     <div>
-                      <h4 className="font-bold text-white text-base">Sertifikalı Uzman Kadro</h4>
-                      <p className="text-zinc-300 text-sm mt-1">Tüm elektrik, tesisat ve yapı işleri ilgili alanda belgesi ve tecrübesi olan profesyonel ustalarca yapılır.</p>
+                      <h4 className="font-bold text-white text-base">Alanında Uzman Kadro</h4>
+                      <p className="text-zinc-300 text-sm mt-1">Tüm elektrik, tesisat ve yapı işleri ilgili alanda uzman ve tecrübesi olan profesyonel ustalarca yapılır.</p>
                     </div>
                   </div>
 
@@ -172,10 +172,10 @@ export default function App() {
       </header>
 
       {/* */}
-      <section id="neden-biz" className="py-20 bg-white border-b border-zinc-100">
+      <section id="neden-biz" className="py-16 sm:py-20 bg-white border-b border-zinc-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            <div className="group relative p-8 bg-white border border-zinc-200 rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+            <div className="group relative p-6 sm:p-8 bg-white border border-zinc-200 rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-400 to-amber-600 rounded-t-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div>
                 <span className="text-5xl font-black text-amber-500/20 group-hover:text-amber-500/40 transition-colors duration-300 mb-4 block leading-none">01</span>
@@ -183,15 +183,15 @@ export default function App() {
                 <p className="text-sm text-zinc-500 mt-2 leading-relaxed">Yapılan tesisat yenileme, çatı yalıtımı veya boya işleri için teslimat sonrası yazılı garanti belgesi veriyoruz.</p>
               </div>
             </div>
-            <div className="group relative p-8 bg-white border border-zinc-200 rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+            <div className="group relative p-6 sm:p-8 bg-white border border-zinc-200 rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-400 to-amber-600 rounded-t-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div>
                 <span className="text-5xl font-black text-amber-500/20 group-hover:text-amber-500/40 transition-colors duration-300 mb-4 block leading-none">02</span>
-                <h3 className="text-lg font-black text-zinc-900 uppercase tracking-wide">Sertifikalı Ustalar</h3>
-                <p className="text-sm text-zinc-500 mt-2 leading-relaxed">Ekiplerimiz, elektrikli araç şarj istasyonu gibi yüksek akım gerektiren işlerde tam yetkili usta sertifikalarına sahiptir.</p>
+                <h3 className="text-lg font-black text-zinc-900 uppercase tracking-wide">Alanında Uzman Personel</h3>
+                <p className="text-sm text-zinc-500 mt-2 leading-relaxed">Her branşta alanında uzman ekiplerle çalışıyor, doğru işe doğru personeli yönlendiriyoruz. Yılların deneyimine sahip ustalarımızla kaliteden ödün vermiyoruz.</p>
               </div>
             </div>
-            <div className="group relative p-8 bg-white border border-zinc-200 rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+            <div className="group relative p-6 sm:p-8 bg-white border border-zinc-200 rounded-xl hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
               <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-amber-400 to-amber-600 rounded-t-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               <div>
                 <span className="text-5xl font-black text-amber-500/20 group-hover:text-amber-500/40 transition-colors duration-300 mb-4 block leading-none">03</span>
@@ -204,7 +204,7 @@ export default function App() {
       </section>
 
       {/* */}
-      <section id="hizmetler" className="py-24 bg-zinc-50">
+      <section id="hizmetler" className="py-16 sm:py-24 bg-zinc-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="text-center max-w-3xl mx-auto mb-16">
@@ -216,7 +216,7 @@ export default function App() {
             <div className="mt-8 flex flex-wrap justify-center gap-2">
               <button 
                 onClick={() => setActiveTab('all')} 
-                className={`px-5 py-2.5 text-xs font-bold uppercase tracking-wider rounded-lg transition-all ${activeTab === 'all' ? 'bg-[#2d3140] text-amber-500 shadow-lg shadow-[#2d3140]/20' : 'bg-white text-zinc-600 hover:text-zinc-900 hover:shadow-md border border-zinc-200 shadow-sm'}`}
+                className={`px-4 sm:px-5 py-3 sm:py-2.5 text-[11px] sm:text-xs font-bold uppercase tracking-wider rounded-lg transition-all ${activeTab === 'all' ? 'bg-[#2d3140] text-amber-500 shadow-lg shadow-[#2d3140]/20' : 'bg-white text-zinc-600 hover:text-zinc-900 hover:shadow-md border border-zinc-200 shadow-sm'}`}
               >
                 TÜMÜ
               </button>
@@ -224,7 +224,7 @@ export default function App() {
                 <button 
                   key={s.id}
                   onClick={() => setActiveTab(s.id)} 
-                  className={`px-5 py-2.5 text-xs font-bold uppercase tracking-wider rounded-lg transition-all ${activeTab === s.id ? 'bg-[#2d3140] text-amber-500 shadow-lg shadow-[#2d3140]/20' : 'bg-white text-zinc-600 hover:text-zinc-900 hover:shadow-md border border-zinc-200 shadow-sm'}`}
+                  className={`px-4 sm:px-5 py-3 sm:py-2.5 text-[11px] sm:text-xs font-bold uppercase tracking-wider rounded-lg transition-all ${activeTab === s.id ? 'bg-[#2d3140] text-amber-500 shadow-lg shadow-[#2d3140]/20' : 'bg-white text-zinc-600 hover:text-zinc-900 hover:shadow-md border border-zinc-200 shadow-sm'}`}
                 >
                   {s.title}
                 </button>
@@ -236,7 +236,7 @@ export default function App() {
             {filteredServices.map((service) => (
               <div 
                 key={service.id} 
-                className="bg-white rounded-xl border border-zinc-200/80 p-8 shadow-sm hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between relative group"
+                className="bg-white rounded-xl border border-zinc-200/80 p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between relative group"
               >
                 <div className="absolute top-4 left-0 w-1 h-8 bg-amber-500 rounded-r group-hover:h-12 transition-all duration-300" />
                 
@@ -271,7 +271,7 @@ export default function App() {
       </section>
 
       {/* */}
-      <section id="nasil-calisir" className="py-24 bg-gradient-to-b from-[#2d3140] to-[#252838] text-white">
+      <section id="nasil-calisir" className="py-16 sm:py-24 bg-gradient-to-b from-[#2d3140] to-[#252838] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-2xl mx-auto mb-16">
             <span className="text-xs font-bold text-amber-500 uppercase tracking-widest">Çalışma Disiplinimiz</span>
@@ -329,7 +329,7 @@ export default function App() {
       </section>
 
       {/* */}
-      <section id="keşif-asistani" className="py-24 bg-zinc-50">
+      <section id="keşif-asistani" className="py-16 sm:py-24 bg-zinc-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
           <div className="bg-white rounded-2xl border border-zinc-200/80 shadow-xl overflow-hidden">
@@ -359,13 +359,13 @@ export default function App() {
               </div>
             </div>
 
-            <div className="p-8 sm:p-12">
+            <div className="p-6 sm:p-12">
               {!isSubmitted ? (
                 <div>
                   
                   {step === 1 && (
                     <div className="animate-fade-in">
-                      <h4 className="text-lg font-bold text-zinc-900 mb-6 uppercase tracking-wide">Hizmet Alınacak Mülk Türünü Seçiniz</h4>
+                      <h4 className="text-base sm:text-lg font-bold text-zinc-900 mb-6 uppercase tracking-wide">Hizmet Alınacak Mülk Türünü Seçiniz</h4>
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                         <button 
                           onClick={() => setPropertyType('villa')}
@@ -548,9 +548,9 @@ export default function App() {
       </section>
 
       {/* */}
-      <footer className="bg-gradient-to-t from-[#1e2133] to-[#2d3140] text-zinc-400 py-16 border-t-2 border-amber-500/50">
+      <footer className="bg-gradient-to-t from-[#1e2133] to-[#2d3140] text-zinc-400 py-12 sm:py-16 border-t-2 border-amber-500/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 sm:gap-12 mb-10 sm:mb-12">
             
             <div className="md:col-span-2">
               <span className="text-2xl font-black text-white tracking-tight">Profesyonel<span className="text-amber-500 font-bold ml-0.5">TEKNİK</span></span>
