@@ -39,6 +39,7 @@ export default function HakkimizdaPage() {
             <div>
               <span className="text-xs font-bold text-amber-500 uppercase tracking-widest">Biz Kimiz?</span>
               <h2 className="text-3xl font-black text-zinc-900 uppercase tracking-wide mt-2">Profesyonel Teknik</h2>
+              <p className="text-xs text-zinc-400 mt-1">Gespa Elektronik Pazarlama Sanayi ve Dış Tic.Ltd.Şti.</p>
               <div className="mt-6 space-y-4 text-zinc-600 leading-relaxed text-sm">
                 <p>
                   Profesyonel Teknik olarak, villa ve daire sahiplerinin ihtiyaç duyduğu tüm teknik servis hizmetlerini tek bir çatı altında topluyoruz. Elektrikli araç şarj istasyonu kurulumundan çatı izolasyonuna, klima montajından bahçe peyzaj aydınlatmasına kadar geniş bir yelpazede hizmet veriyoruz.
