@@ -172,7 +172,7 @@ export default function IletisimPage() {
                       </div>
                       <div>
                         <span className="block text-xs font-bold text-zinc-500 uppercase tracking-wider">E-posta</span>
-                        <a href="mailto:info@profesyonelteknik.com" className="text-sm text-zinc-800 font-medium hover:text-amber-500 transition">info@profesyonelteknik.com</a>
+                        <a href="mailto:bilgi@profesyonelteknik.com" className="text-sm text-zinc-800 font-medium hover:text-amber-500 transition">bilgi@profesyonelteknik.com</a>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
