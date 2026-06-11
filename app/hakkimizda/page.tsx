@@ -102,10 +102,10 @@ export default function HakkimizdaPage() {
               Keşif Asistanını Başlat
             </Link>
             <a
-              href="tel:+905387931938"
+              href="tel:+902128927502"
               className="px-8 py-4 bg-[#2d3140] hover:bg-[#3a3f52] text-white font-bold rounded-lg shadow-md transition-all hover:shadow-lg hover:-translate-y-0.5 text-center text-sm"
             >
-              0538 793 19 38
+              0212 892 75 02
             </a>
           </div>
         </div>
