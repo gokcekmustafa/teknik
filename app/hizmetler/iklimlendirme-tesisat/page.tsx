@@ -3,6 +3,8 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { services } from '@/app/data/services';
+import siteContent from '@/data/siteContent.json';
+const telHref = (n: string) => 'tel:+90' + n.replace(/\s/g, '').replace(/^0/, '');
 
 const service = services.find(s => s.slug === 'iklimlendirme-tesisat')!;
 
@@ -121,19 +123,21 @@ export default function IklimlendirmeTesisatPage() {
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-black uppercase tracking-wide">Hemen Keşif Talep Edin</h2>
           <p className="mt-4 text-zinc-300 text-sm">Uzman ekibimiz yerinde inceleme yaparak size özel çözüm sunsun.</p>
-          <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="mt-8 flex flex-col gap-4 justify-center items-center">
             <Link
-              href="/#kesif-asistani"
+              href="/kesif-asistani"
               className="px-8 py-4 bg-amber-500 hover:bg-amber-600 text-zinc-950 font-extrabold rounded-lg shadow-lg shadow-amber-500/25 transition-all hover:shadow-xl hover:-translate-y-0.5 text-center tracking-wide uppercase text-sm"
             >
               Keşif Asistanını Başlat
             </Link>
-            <a
-              href="tel:+905414659932"
-              className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-bold rounded-lg transition-all hover:-translate-y-0.5 text-center text-sm"
-            >
-              0541 465 99 32
-            </a>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <a href={telHref(siteContent.phones.primary)} className="px-6 py-3.5 bg-white/10 hover:bg-white/15 border border-white/20 text-white font-bold rounded-xl transition-all hover:-translate-y-0.5 text-center text-sm flex items-center justify-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" /> {siteContent.phones.primary}
+              </a>
+              <a href={telHref(siteContent.phones.secondary)} className="px-6 py-3.5 bg-white/5 hover:bg-white/10 border border-white/10 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5 text-center text-sm flex items-center justify-center gap-2">
+                {siteContent.phones.secondary}
+              </a>
+            </div>
           </div>
         </div>
       </section>

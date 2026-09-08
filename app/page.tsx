@@ -2,7 +2,9 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import siteContent from '@/data/siteContent.json';
 
+const telHref = (n: string) => 'tel:+90' + n.replace(/\s/g, '').replace(/^0/, '');
 const ACCESS_KEY = 'c487cfcb-24cc-45e3-a0e7-2e3d4e44d991';
 
 const services = [
@@ -167,16 +169,20 @@ export default function App() {
                 Usta arayarak vakit kaybetmeyin. Elektrikli şarj istasyonu kurulumundan çatı izolasyonuna, bahçe kapı otomasyonundan ince işçilik boya ve seramik uygulamalarına kadar tüm ihtiyaçları sertifikalı uzman kadromuz ve yazılı iş garantimizle çözüyoruz.
               </p>
               
-              <div className="mt-10 flex flex-col sm:flex-row gap-4 animate-fade-in-up animate-delay-300">
+              <div className="mt-10 flex flex-col gap-4 animate-fade-in-up animate-delay-300">
                 <a href="/kesif-asistani" className="px-8 py-4 bg-amber-500 hover:bg-amber-600 text-zinc-950 font-extrabold rounded-lg shadow-lg shadow-amber-500/25 transition-all hover:shadow-xl hover:shadow-amber-500/30 hover:-translate-y-0.5 text-center tracking-wide uppercase text-sm">
                   Keşif Asistanını Başlat
                 </a>
-                   <a href="tel:+905414659932" className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-bold rounded-lg transition-all hover:-translate-y-0.5 text-center text-sm flex items-center justify-center gap-2">
-                  <svg className="w-4 h-4 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                  </svg>
-                  0541 465 99 32
-                </a>
+                <div className="flex flex-col sm:flex-row gap-3">
+                  <a href={telHref(siteContent.phones.primary)} className="flex-1 px-6 py-3.5 bg-white/10 hover:bg-white/15 backdrop-blur-sm border border-white/20 text-white font-bold rounded-xl transition-all hover:-translate-y-0.5 text-center text-sm flex items-center justify-center gap-2">
+                    <svg className="w-4 h-4 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                    {siteContent.phones.primary}
+                  </a>
+                  <a href={telHref(siteContent.phones.secondary)} className="flex-1 px-6 py-3.5 bg-white/5 hover:bg-white/10 backdrop-blur-sm border border-white/15 text-white font-semibold rounded-xl transition-all hover:-translate-y-0.5 text-center text-sm flex items-center justify-center gap-2">
+                    <svg className="w-4 h-4 text-zinc-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                    {siteContent.phones.secondary}
+                  </a>
+                </div>
               </div>
             </div>
 
@@ -622,11 +628,19 @@ export default function App() {
 
             <div>
               <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">İletişim</h4>
-              <ul className="space-y-2.5 text-xs">
-                <li className="flex items-start gap-2"><svg className="w-3.5 h-3.5 text-amber-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>Saadetdere mah. 109. sk. no:27/1 Esenyurt/İST.</li>
-                <li className="flex items-center gap-2"><svg className="w-3.5 h-3.5 text-amber-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg><a href="tel:+905414659932" className="hover:text-amber-500 transition">0541 465 99 32</a></li>
-                <li className="flex items-center gap-2"><svg className="w-3.5 h-3.5 text-[#25D366] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg><a href="tel:+905325246444" className="hover:text-amber-500 transition">0532 524 64 44</a></li>
-                <li className="flex items-center gap-2"><svg className="w-3.5 h-3.5 text-amber-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg><a href="mailto:bilgi@bbbinsaat44.com" className="hover:text-amber-500 transition">bilgi@bbbinsaat44.com</a></li>
+              <ul className="space-y-3 text-xs">
+                <li className="flex items-start gap-2.5"><span className="w-7 h-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0"><svg className="w-3.5 h-3.5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg></span><span className="pt-1.5 leading-relaxed">{siteContent.address}</span></li>
+                <li className="grid grid-cols-1 gap-2">
+                  <a href={telHref(siteContent.phones.primary)} className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.07] border border-white/10 hover:border-amber-500/30 transition group">
+                    <span className="w-7 h-7 rounded-lg bg-amber-500/15 flex items-center justify-center flex-shrink-0 group-hover:bg-amber-500/25 transition"><svg className="w-3.5 h-3.5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg></span>
+                    <span className="font-semibold tracking-wide">{siteContent.phones.primary}</span><span className="ml-auto text-[10px] text-zinc-500 group-hover:text-amber-500">Ara →</span>
+                  </a>
+                  <a href={telHref(siteContent.phones.secondary)} className="flex items-center gap-2.5 px-3 py-2.5 rounded-xl bg-white/[0.04] hover:bg-white/[0.07] border border-white/10 hover:border-white/20 transition group">
+                    <span className="w-7 h-7 rounded-lg bg-white/5 flex items-center justify-center flex-shrink-0"><svg className="w-3.5 h-3.5 text-zinc-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg></span>
+                    <span className="font-medium tracking-wide">{siteContent.phones.secondary}</span><span className="ml-auto text-[10px] text-zinc-500 group-hover:text-white">Ara →</span>
+                  </a>
+                </li>
+                <li className="flex items-center gap-2.5"><span className="w-7 h-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0"><svg className="w-3.5 h-3.5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg></span><a href={`mailto:${siteContent.email}`} className="hover:text-amber-500 transition font-medium">{siteContent.email}</a></li>
                 <li className="text-[10px] text-zinc-500 pt-1 border-t border-white/5 mt-1">Gespa Elektronik Pazarlama Sanayi ve Dış Tic.Ltd.Şti.</li>
               </ul>
             </div>

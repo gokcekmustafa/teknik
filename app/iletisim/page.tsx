@@ -1,6 +1,9 @@
 'use client';
 
 import { useState } from 'react';
+import siteContent from '@/data/siteContent.json';
+const telHref = (n: string) => 'tel:+90' + n.replace(/\s/g, '').replace(/^0/, '');
+const waHref = (n: string) => 'https://wa.me/90' + n.replace(/\s/g, '').replace(/^0/, '');
 
 const ACCESS_KEY = 'c487cfcb-24cc-45e3-a0e7-2e3d4e44d991';
 
@@ -137,31 +140,22 @@ export default function IletisimPage() {
                           <path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                         </svg>
                       </div>
-                      <div>
+                       <div>
                         <span className="block text-xs font-bold text-zinc-500 uppercase tracking-wider">Merkez Ofis</span>
-                        <span className="text-sm text-zinc-800 font-medium">Saadetdere mahallesi 109. sokak no:27/1 Esenyurt/İSTANBUL</span>
+                        <span className="text-sm text-zinc-800 font-medium">{siteContent.address}</span>
                       </div>
                     </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-amber-500/10 flex items-center justify-center flex-shrink-0">
-                        <svg className="w-4 h-4 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                        </svg>
-                      </div>
-                      <div>
-                        <span className="block text-xs font-bold text-zinc-500 uppercase tracking-wider">Telefon</span>
-                        <a href="tel:+905414659932" className="text-sm text-zinc-800 font-medium hover:text-amber-500 transition">0541 465 99 32</a>
-                      </div>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-[#25D366]/10 flex items-center justify-center flex-shrink-0">
-                        <svg className="w-4 h-4 text-[#25D366]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                        </svg>
-                      </div>
-                      <div>
-                        <span className="block text-xs font-bold text-zinc-500 uppercase tracking-wider">Mobil</span>
-                        <a href="tel:+905325246444" className="text-sm text-zinc-800 font-medium hover:text-amber-500 transition">0532 524 64 44</a>
+                    <div className="space-y-3">
+                      <span className="block text-xs font-bold text-zinc-500 uppercase tracking-wider">Telefonlar</span>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <a href={telHref(siteContent.phones.primary)} className="flex items-center gap-3 p-3 rounded-xl border border-amber-200 bg-amber-50 hover:bg-amber-100 transition group">
+                          <span className="w-9 h-9 rounded-lg bg-amber-500 text-white flex items-center justify-center flex-shrink-0"><svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg></span>
+                          <span className="text-sm font-bold text-zinc-900 group-hover:text-amber-700">{siteContent.phones.primary}</span>
+                        </a>
+                        <a href={telHref(siteContent.phones.secondary)} className="flex items-center gap-3 p-3 rounded-xl border border-zinc-200 bg-zinc-50 hover:bg-white hover:shadow-sm transition group">
+                          <span className="w-9 h-9 rounded-lg bg-zinc-900 text-white flex items-center justify-center flex-shrink-0"><svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg></span>
+                          <span className="text-sm font-bold text-zinc-800">{siteContent.phones.secondary}</span>
+                        </a>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
@@ -172,7 +166,7 @@ export default function IletisimPage() {
                       </div>
                       <div>
                         <span className="block text-xs font-bold text-zinc-500 uppercase tracking-wider">E-posta</span>
-                        <a href="mailto:bilgi@bbbinsaat44.com" className="text-sm text-zinc-800 font-medium hover:text-amber-500 transition">bilgi@bbbinsaat44.com</a>
+                        <a href={`mailto:${siteContent.email}`} className="text-sm text-zinc-800 font-medium hover:text-amber-500 transition">{siteContent.email}</a>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
@@ -191,7 +185,7 @@ export default function IletisimPage() {
 
                 <div className="pt-6 border-t border-zinc-200">
                   <a
-                    href="https://wa.me/905414659932"
+                    href={waHref(siteContent.phones.whatsapp)}
                     className="flex items-center justify-center gap-3 w-full px-6 py-3.5 bg-[#25D366] hover:bg-[#1ebe57] text-white font-bold rounded-xl transition-all shadow-lg shadow-[#25D366]/20 hover:shadow-xl"
                   >
                     <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
