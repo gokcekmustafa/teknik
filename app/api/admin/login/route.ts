@@ -1,16 +1,18 @@
 import { NextResponse } from "next/server";
 
 export async function POST(req: Request) {
-  const { password } = await req.json();
-  if (!process.env.ADMIN_PASSWORD) {
-    return NextResponse.json({ error: "ADMIN_PASSWORD not set" }, { status: 500 });
+  const { username, password } = await req.json();
+  const expUser = process.env.ADMIN_USERNAME;
+  const expPass = process.env.ADMIN_PASSWORD;
+  if (!expUser || !expPass) {
+    return NextResponse.json({ error: "ADMIN_USERNAME/PASSWORD not set" }, { status: 500 });
   }
-  if (password === process.env.ADMIN_PASSWORD) {
+  if (username === expUser && password === expPass) {
     const res = NextResponse.json({ ok: true });
-    res.cookies.set("admin_auth", process.env.ADMIN_PASSWORD!, { httpOnly: true, path: "/", maxAge: 60 * 60 * 8, sameSite: "lax" });
+    res.cookies.set("admin_auth", expPass, { httpOnly: true, path: "/", maxAge: 60 * 60 * 8, sameSite: "lax" });
     return res;
   }
-  return NextResponse.json({ error: "Hatalı şifre" }, { status: 401 });
+  return NextResponse.json({ error: "Hatalı kullanıcı adı veya şifre" }, { status: 401 });
 }
 export async function DELETE() {
   const res = NextResponse.json({ ok: true });

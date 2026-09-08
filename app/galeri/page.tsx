@@ -20,8 +20,8 @@ export default function GaleriPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {items.length === 0 ? (
             <div className="text-center py-20 border border-dashed border-zinc-300 rounded-2xl bg-white">
-              <p className="text-zinc-500">Henüz fotoğraf eklenmedi. Admin panelinden yükleyebilirsiniz.</p>
-              <a href="/admin" className="inline-block mt-4 px-6 py-3 bg-[#2d3140] text-amber-500 font-bold rounded-lg text-sm">Admin Paneli →</a>
+              <p className="text-zinc-500">Henüz fotoğraf eklenmedi.</p>
+              <p className="text-xs text-zinc-400 mt-2">Projelerimiz yakında burada sergilenecek.</p>
             </div>
           ) : (
             <>

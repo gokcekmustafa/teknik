@@ -5,6 +5,7 @@ type GalleryItem = { id: string; src: string; category: string; title: string };
 
 export default function AdminPage() {
   const [authed, setAuthed] = useState<boolean | null>(null);
+  const [user, setUser] = useState('');
   const [pwd, setPwd] = useState('');
   const [err, setErr] = useState('');
   const [tab, setTab] = useState<'gallery'|'content'>('gallery');
@@ -36,13 +37,13 @@ export default function AdminPage() {
   async function login(e: React.FormEvent) {
     e.preventDefault();
     setErr('');
-    const r = await fetch('/api/admin/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ password: pwd }) });
+    const r = await fetch('/api/admin/login', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ username: user, password: pwd }) });
     if (r.ok) { setAuthed(true); // reload data with auth
       const g = await fetch('/api/admin/gallery').then(r=>r.json()).catch(()=>[]);
       if (Array.isArray(g)) setGallery(g);
       const c = await fetch('/api/admin/content').then(r=>r.json()).catch(()=>null);
       if (c?.phones) setContent(c);
-    } else { setErr('Hatalı şifre'); }
+    } else { setErr('Hatalı kullanıcı adı veya şifre'); }
   }
   async function logout() {
     await fetch('/api/admin/login', { method: 'DELETE' });
@@ -86,8 +87,9 @@ export default function AdminPage() {
       <div className="min-h-screen bg-zinc-50 flex items-center justify-center p-4">
         <form onSubmit={login} className="bg-white border border-zinc-200 rounded-2xl p-8 w-full max-w-sm shadow-sm">
           <h1 className="text-xl font-black uppercase tracking-wide">Admin Girişi</h1>
-          <p className="text-xs text-zinc-500 mt-2">GitHub tabanlı yönetim — şifreni gir.</p>
-          <input type="password" value={pwd} onChange={e=>setPwd(e.target.value)} placeholder="Şifre" className="mt-6 w-full border border-zinc-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-500" />
+          <p className="text-xs text-zinc-500 mt-2">Kullanıcı adı ve şifreni gir.</p>
+          <input value={user} onChange={e=>setUser(e.target.value)} placeholder="Kullanıcı adı" className="mt-6 w-full border border-zinc-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-500" />
+          <input type="password" value={pwd} onChange={e=>setPwd(e.target.value)} placeholder="Şifre" className="mt-3 w-full border border-zinc-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-amber-500" />
           {err && <p className="text-xs text-red-500 mt-2">{err}</p>}
           <button type="submit" className="mt-4 w-full py-3 bg-[#2d3140] text-amber-500 font-bold rounded-xl text-sm">Giriş Yap</button>
         </form>
