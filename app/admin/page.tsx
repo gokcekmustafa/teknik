@@ -15,7 +15,7 @@ export default function AdminPage() {
   const [uploading, setUploading] = useState(false);
   const [gTitle, setGTitle] = useState('');
   const [gCat, setGCat] = useState('Genel');
-  const [gFile, setGFile] = useState<File | null>(null);
+  const [gFiles, setGFiles] = useState<File[]>([]);
   const [gMsg, setGMsg] = useState('');
 
   // content state
@@ -52,17 +52,22 @@ export default function AdminPage() {
 
   async function uploadGallery(e: React.FormEvent) {
     e.preventDefault();
-    if (!gFile) { setGMsg('Dosya seçin'); return; }
+    if (gFiles.length === 0) { setGMsg('Dosya seçin'); return; }
     setUploading(true); setGMsg('');
-    const b64 = await new Promise<string>((res, rej) => {
-      const r = new FileReader(); r.onload = () => res((r.result as string).split(',')[1]); r.onerror = rej; r.readAsDataURL(gFile);
-    });
-    const r = await fetch('/api/admin/gallery', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ filename: gFile.name, base64: b64, category: gCat, title: gTitle || gFile.name }) });
-    const j = await r.json();
+    let ok = 0, fail = 0;
+    for (let i = 0; i < gFiles.length; i++) {
+      const f = gFiles[i];
+      setGMsg(`${i + 1}/${gFiles.length} yükleniyor...`);
+      const b64 = await new Promise<string>((res, rej) => {
+        const r = new FileReader(); r.onload = () => res((r.result as string).split(',')[1]); r.onerror = rej; r.readAsDataURL(f);
+      });
+      const r = await fetch('/api/admin/gallery', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ filename: f.name, base64: b64, category: gCat, title: gFiles.length === 1 ? (gTitle || f.name) : f.name }) });
+      if (r.ok) ok++; else fail++;
+    }
     setUploading(false);
-    if (!r.ok) { setGMsg(j.error || 'Yükleme hatası'); return; }
-    setGMsg('Yüklendi! GitHub commit sonrası 1 dk içinde galeride görünecek.');
-    setGFile(null); setGTitle('');
+    if (fail > 0) setGMsg(`${ok} yüklendi, ${fail} hata. GitHub commit sonrası 1 dk içinde galeride görünecek.`);
+    else setGMsg(`${ok} fotoğraf yüklendi! GitHub commit sonrası 1 dk içinde galeride görünecek.`);
+    setGFiles([]); setGTitle(''); (document.getElementById('gallery-file') as HTMLInputElement | null)?.value && ((document.getElementById('gallery-file') as HTMLInputElement).value = '');
     const ng = await fetch('/api/admin/gallery').then(r=>r.json()).catch(()=>[]);
     if (Array.isArray(ng)) setGallery(ng);
   }
@@ -115,13 +120,16 @@ export default function AdminPage() {
             <form onSubmit={uploadGallery} className="bg-white border border-zinc-200 rounded-2xl p-6 shadow-sm space-y-4">
               <h2 className="font-black uppercase tracking-wide">Fotoğraf Yükle</h2>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <input type="file" accept="image/*" onChange={e=>setGFile(e.target.files?.[0]||null)} className="border border-zinc-200 rounded-xl px-3 py-2.5 text-sm" />
-                <input value={gTitle} onChange={e=>setGTitle(e.target.value)} placeholder="Başlık (opsiyonel)" className="border border-zinc-200 rounded-xl px-4 py-2.5 text-sm" />
+                <input id="gallery-file" type="file" accept="image/*" multiple onChange={e=>setGFiles(e.target.files ? Array.from(e.target.files) : [])} className="border border-zinc-200 rounded-xl px-3 py-2.5 text-sm" />
+                <input value={gTitle} onChange={e=>setGTitle(e.target.value)} placeholder={gFiles.length > 1 ? 'Toplu yüklemede dosya adı kullanılır' : 'Başlık (opsiyonel)'} disabled={gFiles.length > 1} className="border border-zinc-200 rounded-xl px-4 py-2.5 text-sm disabled:bg-zinc-50" />
                 <select value={gCat} onChange={e=>setGCat(e.target.value)} className="border border-zinc-200 rounded-xl px-4 py-2.5 text-sm">
                   <option>Genel</option><option>Seramik</option><option>Mermer</option><option>Paslanmaz</option><option>Mobilya</option><option>Alçıpan</option><option>Elektrik</option><option>Demir Kaynak</option><option>Şap</option><option>İnce İşçilik</option>
                 </select>
               </div>
-              <button disabled={uploading} className="px-6 py-3 bg-amber-500 hover:bg-amber-600 disabled:opacity-50 text-zinc-950 font-black rounded-xl text-xs uppercase tracking-wider">{uploading?'Yükleniyor...':'Yükle ve GitHub\'a Kaydet'}</button>
+              <div className="flex items-center gap-3">
+                <button disabled={uploading} className="px-6 py-3 bg-amber-500 hover:bg-amber-600 disabled:opacity-50 text-zinc-950 font-black rounded-xl text-xs uppercase tracking-wider">{uploading?'Yükleniyor...': gFiles.length > 1 ? `${gFiles.length} Fotoğrafı Yükle` : 'Yükle ve GitHub\'a Kaydet'}</button>
+                {gFiles.length > 0 && <span className="text-xs text-zinc-500">{gFiles.length} dosya seçildi</span>}
+              </div>
               {gMsg && <p className="text-xs font-semibold text-zinc-600">{gMsg}</p>}
               <p className="text-[11px] text-zinc-400">Yükleme GitHub'a commit atar, Vercel ~1 dk içinde yeniden deploy olur.</p>
             </form>
