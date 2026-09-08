@@ -46,7 +46,7 @@ export default function Header() {
               <Link href="/nasil-calisir" className="hover:text-amber-500 transition relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-amber-500 after:transition-all after:duration-300">Nasıl Çalışırız?</Link>
               <Link href="/kesif-asistani" className="hover:text-amber-500 transition relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-amber-500 after:transition-all after:duration-300">Akıllı Keşif</Link>
               <Link href="/iletisim" className="hover:text-amber-500 transition relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-amber-500 after:transition-all after:duration-300">İletişim</Link>
-              <a href="https://wa.me/905405250050" className="bg-[#25D366] hover:bg-[#1ebe57] text-white border border-[#1ebe57] px-5 py-2.5 rounded-lg transition shadow-lg shadow-[#25D366]/20 font-bold flex items-center gap-2">
+              <a href="https://wa.me/905414659932" className="bg-[#25D366] hover:bg-[#1ebe57] text-white border border-[#1ebe57] px-5 py-2.5 rounded-lg transition shadow-lg shadow-[#25D366]/20 font-bold flex items-center gap-2">
                 <svg className="w-4 h-4 fill-current text-white" viewBox="0 0 24 24">
                   <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.411 0 11.981 0c3.184.001 6.177 1.242 8.43 3.496 2.253 2.254 3.492 5.249 3.49 8.434-.004 6.632-5.353 11.982-11.922 11.982-2.01-.002-3.987-.508-5.742-1.472L0 24zm6.59-4.846c1.62.963 3.21 1.48 5.333 1.481 5.417-.002 9.825-4.382 9.828-9.755.002-2.602-1.01-5.05-2.85-6.892C17.07 2.146 14.625 1.13 12.01 1.13c-5.424 0-9.833 4.383-9.836 9.758-.002 2.105.548 4.15 1.594 5.943l-1.044 3.812 3.923-1.017z"/>
                 </svg>
@@ -80,7 +80,7 @@ export default function Header() {
             <Link href="/nasil-calisir" onClick={() => setIsMobileMenuOpen(false)} className="block py-3.5 px-3 font-semibold text-zinc-700 hover:text-amber-500 hover:bg-zinc-50 rounded-lg transition-all">Nasıl Çalışırız?</Link>
             <Link href="/kesif-asistani" onClick={() => setIsMobileMenuOpen(false)} className="block py-3.5 px-3 font-semibold text-zinc-700 hover:text-amber-500 hover:bg-zinc-50 rounded-lg transition-all">Akıllı Keşif</Link>
             <Link href="/iletisim" onClick={() => setIsMobileMenuOpen(false)} className="block py-3.5 px-3 font-semibold text-zinc-700 hover:text-amber-500 hover:bg-zinc-50 rounded-lg transition-all">İletişim</Link>
-            <a href="https://wa.me/905405250050" className="block text-center bg-[#25D366] hover:bg-[#1ebe57] text-white border border-[#1ebe57] py-4 rounded-xl font-bold mt-3">WhatsApp Canlı Destek</a>
+            <a href="https://wa.me/905414659932" className="block text-center bg-[#25D366] hover:bg-[#1ebe57] text-white border border-[#1ebe57] py-4 rounded-xl font-bold mt-3">WhatsApp Canlı Destek</a>
           </div>
         )}
       </nav>

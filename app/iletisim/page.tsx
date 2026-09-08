@@ -191,7 +191,7 @@ export default function IletisimPage() {
 
                 <div className="pt-6 border-t border-zinc-200">
                   <a
-                    href="https://wa.me/905405250050"
+                    href="https://wa.me/905414659932"
                     className="flex items-center justify-center gap-3 w-full px-6 py-3.5 bg-[#25D366] hover:bg-[#1ebe57] text-white font-bold rounded-xl transition-all shadow-lg shadow-[#25D366]/20 hover:shadow-xl"
                   >
                     <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
