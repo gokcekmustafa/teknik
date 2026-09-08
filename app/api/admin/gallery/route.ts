@@ -25,6 +25,21 @@ export async function POST(req: Request) {
   return NextResponse.json({ ok: true, src: `/uploads/gallery/${safeName}` });
 }
 
+export async function PUT(req: Request) {
+  if (!(await isAdmin(req))) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  const { id, category } = await req.json();
+  if (!id || !category) return NextResponse.json({ error: "id/category required" }, { status: 400 });
+  const cur = await getFileContent("data/gallery.json");
+  if (!cur) return NextResponse.json({ error: "gallery not found" }, { status: 404 });
+  const list = JSON.parse(cur.content);
+  const idx = list.findIndex((x: { id: string }) => x.id === id);
+  if (idx === -1) return NextResponse.json({ error: "not found" }, { status: 404 });
+  list[idx].category = category;
+  const newContent = Buffer.from(JSON.stringify(list, null, 2)).toString("base64");
+  await putFile("data/gallery.json", newContent, `admin: update gallery.json category ${id} -> ${category}`, cur.sha);
+  return NextResponse.json({ ok: true });
+}
+
 export async function DELETE(req: Request) {
   if (!(await isAdmin(req))) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
   const { id } = await req.json();

@@ -77,6 +77,11 @@ export default function AdminPage() {
     if (!r.ok) { alert('Silme hatası'); return; }
     setGallery(gallery.filter(g=>g.id!==id));
   }
+  async function updateCategory(id: string, category: string) {
+    const r = await fetch('/api/admin/gallery', { method: 'PUT', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, category }) });
+    if (!r.ok) { alert('Kategori güncellenemedi'); return; }
+    setGallery(gallery.map(g => g.id === id ? { ...g, category } : g));
+  }
   async function saveContent(e: React.FormEvent) {
     e.preventDefault();
     if (!content) return;
@@ -140,11 +145,12 @@ export default function AdminPage() {
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                   {gallery.map(it=>(
                     <div key={it.id} className="border border-zinc-200 rounded-xl overflow-hidden bg-zinc-50">
-                      <div className="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden"><img src={it.src} alt={it.title} className="w-full h-full object-cover" /></div>
-                      <div className="p-3">
-                        <p className="text-xs font-bold truncate">{it.title}</p>
-                        <p className="text-[10px] text-zinc-500">{it.category}</p>
-                        <button onClick={()=>deleteItem(it.id)} className="mt-2 text-xs font-bold text-red-600 hover:underline">Sil</button>
+                      <div className="aspect-[4/3] bg-white flex items-center justify-center overflow-hidden"><img src={it.src} alt={it.category} className="w-full h-full object-cover" /></div>
+                      <div className="p-3 space-y-2">
+                        <select value={it.category} onChange={e=>updateCategory(it.id, e.target.value)} className="w-full border border-zinc-200 rounded-lg px-2 py-1.5 text-xs font-semibold bg-white">
+                          <option>Genel</option><option>Seramik</option><option>Mermer</option><option>Paslanmaz</option><option>Mobilya</option><option>Alçıpan</option><option>Elektrik</option><option>Demir Kaynak</option><option>Şap</option><option>İnce İşçilik</option><option>İnşaat Taahhüt</option><option>Kaplama</option>
+                        </select>
+                        <button onClick={()=>deleteItem(it.id)} className="text-xs font-bold text-red-600 hover:underline">Sil</button>
                       </div>
                     </div>
                   ))}

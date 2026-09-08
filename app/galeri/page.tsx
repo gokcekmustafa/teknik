@@ -38,9 +38,8 @@ export default function GaleriPage() {
                     <div className="aspect-[4/3] bg-zinc-100 overflow-hidden">
                       <img src={it.src} alt={it.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" />
                     </div>
-                    <div className="p-4">
+                    <div className="p-3">
                       <span className="text-[10px] font-bold text-amber-600 uppercase tracking-widest">{it.category}</span>
-                      <h3 className="font-bold text-zinc-900 text-sm mt-1">{it.title}</h3>
                     </div>
                   </div>
                 ))}
