@@ -13,7 +13,8 @@ const services = [
     items: [
       "Elektrikli Şarj İstasyonu Kurulumu & Beslemesi",
       "Bahçe Aydınlatma Altyapı ve Montaj İşleri",
-      "Bulvar ve Sokak Arası Aydınlatma Direk Kurulumları"
+      "Bulvar ve Sokak Arası Aydınlatma Direk Kurulumları",
+      "Elektrik Uygulaması"
     ]
   },
   {
@@ -43,9 +44,30 @@ const services = [
     title: "Yenileme & İzolasyon",
     description: "Dış etkenlere karşı koruma ve estetik görünüm kazandıran yapı uygulamaları.",
     items: [
-      "Seramik, Granit ve Mermer Döşeme İşleri",
       "Dış Cephe & İç Cephe Alçı, Sıva ve Boya İşleri",
+      "Alçıpan Uygulaması",
       "Çatı İzolasyonu & Kiremit Aktarma ve Tamiri"
+    ]
+  },
+  {
+    id: "kaplama",
+    title: "Kaplama Uygulamaları",
+    description: "Zemin ve duvarlarda seramik, mermer ve şap ile estetik kaplama çözümleri.",
+    items: [
+      "Seramik Uygulaması",
+      "Mermer Uygulaması",
+      "Şap Uygulaması",
+      "İnce İşçilik Uygulaması"
+    ]
+  },
+  {
+    id: "metal-ahsap",
+    title: "Metal & Ahşap Uygulamaları",
+    description: "Paslanmaz, demir ve mobilya imalatında ölçüye özel dayanıklı çözümler.",
+    items: [
+      "Paslanmaz Uygulaması",
+      "Demir Kaynak Uygulaması",
+      "Mobilya Uygulaması"
     ]
   }
 ];
@@ -149,11 +171,11 @@ export default function App() {
                 <a href="/kesif-asistani" className="px-8 py-4 bg-amber-500 hover:bg-amber-600 text-zinc-950 font-extrabold rounded-lg shadow-lg shadow-amber-500/25 transition-all hover:shadow-xl hover:shadow-amber-500/30 hover:-translate-y-0.5 text-center tracking-wide uppercase text-sm">
                   Keşif Asistanını Başlat
                 </a>
-                   <a href="tel:+902128927502" className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-bold rounded-lg transition-all hover:-translate-y-0.5 text-center text-sm flex items-center justify-center gap-2">
+                   <a href="tel:+905414659932" className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-bold rounded-lg transition-all hover:-translate-y-0.5 text-center text-sm flex items-center justify-center gap-2">
                   <svg className="w-4 h-4 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
-                  0212 892 75 02
+                  0541 465 99 32
                 </a>
               </div>
             </div>
@@ -602,8 +624,8 @@ export default function App() {
               <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">İletişim</h4>
               <ul className="space-y-2.5 text-xs">
                 <li className="flex items-start gap-2"><svg className="w-3.5 h-3.5 text-amber-500 mt-0.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>Saadetdere mah. 109. sk. no:27/1 Esenyurt/İST.</li>
-                <li className="flex items-center gap-2"><svg className="w-3.5 h-3.5 text-amber-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg><a href="tel:+902128927502" className="hover:text-amber-500 transition">0212 892 75 02</a></li>
-                <li className="flex items-center gap-2"><svg className="w-3.5 h-3.5 text-[#25D366] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg><a href="tel:+905387931938" className="hover:text-amber-500 transition">0538 793 19 38</a></li>
+                <li className="flex items-center gap-2"><svg className="w-3.5 h-3.5 text-amber-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg><a href="tel:+905414659932" className="hover:text-amber-500 transition">0541 465 99 32</a></li>
+                <li className="flex items-center gap-2"><svg className="w-3.5 h-3.5 text-[#25D366] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg><a href="tel:+905325246444" className="hover:text-amber-500 transition">0532 524 64 44</a></li>
                 <li className="flex items-center gap-2"><svg className="w-3.5 h-3.5 text-amber-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg><a href="mailto:bilgi@bbbinsaat44.com" className="hover:text-amber-500 transition">bilgi@bbbinsaat44.com</a></li>
                 <li className="text-[10px] text-zinc-500 pt-1 border-t border-white/5 mt-1">Gespa Elektronik Pazarlama Sanayi ve Dış Tic.Ltd.Şti.</li>
               </ul>

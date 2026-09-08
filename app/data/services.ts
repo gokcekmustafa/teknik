@@ -40,6 +40,12 @@ export const services: Service[] = [
         longDesc: "Site içi yollar, bulvarlar ve ortak kullanım alanlarında ihtiyaç duyulan aydınlatma direklerinin kurulumunu gerçekleştiriyoruz. Direk temelinden kablolama ve montaja kadar tüm süreç ekiplerimiz tarafından yürütülür. LED teknolojisi ile enerji verimliliği sağlayan çözümlerimizle ortak alanlarınızı güvenli ve aydınlık hale getiriyoruz.",
         benefits: ["Galvanizli ve dekoratif direk seçenekleri", "LED armatürler ile enerji tasarrufu", "Topraklama ve yıldırımdan koruma", "Fotoselli ve zamanlayıcılı kontrol sistemleri"],
       },
+      {
+        title: "Elektrik Uygulaması",
+        shortDesc: "Sigorta, priz, anahtar ve zayıf akım elektrik tesisatı uygulamaları.",
+        longDesc: "Villa ve dairelerinizde tüm elektrik altyapısını standartlara uygun şekilde kuruyor ve yeniliyoruz. Sigorta panosu yenileme, hat çekimi, priz-anahtar montajı, LED spot ve aydınlatma tesisatı ile birlikte internet, uydu ve kamera zayıf akım altyapısı da anahtar teslim tamamlanır. Kaçak akım, topraklama ve regülasyon testleri ile güvenli teslim sağlanır.",
+        benefits: ["Sigorta panosu kurulum ve yenileme", "Priz, anahtar ve aydınlatma tesisatı", "Zayıf akım (internet, uydu, kamera) altyapısı", "Topraklama ve kaçak akım testli teslim"],
+      },
     ],
   },
   {
@@ -116,22 +122,82 @@ export const services: Service[] = [
     icon: "🏗️",
     items: [
       {
-        title: "Seramik, Granit ve Mermer Döşeme İşleri",
-        shortDesc: "İç ve dış mekanlar için profesyonel seramik, granit ve mermer döşeme.",
-        longDesc: "Yaşam alanlarınıza değer katan seramik, granit ve mermer döşeme işlerinde uzman kadromuzla hizmetinizdeyiz. Banyo, mutfak, salon, balkon ve dış cephe gibi her türlü alanda şap atma, su yalıtımı, derz dolgu ve parlatma işlemleri titizlikle gerçekleştirilir. Hexagon, balıksırtı gibi özel döşeme desenleri de talebinize göre uygulanır.",
-        benefits: ["Seramik, granit, mermer ve fayans döşeme", "Su yalıtımı ve şap uygulaması", "Özel desen ve dekoratif döşeme", "Derz dolgu, parlatma ve sızdırmazlık"],
-      },
-      {
         title: "Dış Cephe & İç Cephe Alçı, Sıva ve Boya İşleri",
         shortDesc: "Alçı sıva, saten alçı, kaba sıva ve dekoratif boya uygulamaları.",
         longDesc: "Mülkünüzün iç ve dış cephesinde profesyonel sıva ve boya hizmetleri sunuyoruz. Alçı sıva, saten alçı, kaba sıva, dış cephe ısı yalıtım sıvası ve dekoratif boya uygulamalarında uzman ekibimizle kusursuz yüzeyler elde ediyoruz. Silikonlu boyalar, dokulu sıvalar ve özel renk karışımları ile mekanınıza karakter katıyoruz.",
         benefits: ["Alçı sıva ve saten alçı uygulaması", "Dış cephe ısı yalıtım sıvası (mantolama)", "Silikonlu ve silikatlı boyalar", "Dekoratif sıva ve özel doku uygulamaları"],
       },
       {
+        title: "Alçıpan Uygulaması",
+        shortDesc: "Bölme duvar, asma tavan, niş ve gizli ışık bandı alçıpan sistemleri.",
+        longDesc: "Mekanlarınıza modern ve estetik bir görünüm kazandıran alçıpan uygulamalarında uzmanız. Bölme duvar, asma tavan, TV ünitesi nişi, gizli ışık bandı ve akustik alçıpan çözümleri projenize özel ölçülendirilir. Metal konstrüksiyon, derz bandı ve saten alçı ile pürüzsüz yüzeyler oluşturulup boyaya hazır teslim edilir.",
+        benefits: ["Bölme duvar ve asma tavan sistemleri", "Gizli ışık bandı ve niş imalatı", "Neme dayanıklı ve yangına dayanıklı levha seçenekleri", "Saten alçı ile boyaya hazır kusursuz yüzey"],
+      },
+      {
         title: "Çatı İzolasyonu & Kiremit Aktarma ve Tamiri",
         shortDesc: "Isı ve su yalıtımı, kiremit onarımı ve çatı yenileme.",
         longDesc: "Çatınızda oluşan su sızıntıları, ısı kaybı ve kiremit hasarları için kapsamlı çözümler sunuyoruz. Çatı izolasyonu, kiremit aktarma, membran uygulaması ve çatı onarımı gibi tüm işlemler uzman ekiplerimiz tarafından gerçekleştirilir. Isı yalıtımı ile enerji faturalarınızı düşürürken, su yalıtımı ile çatınızı nem ve rutubete karşı koruyoruz.",
         benefits: ["Isı yalıtımı (taş yünü, cam yünü, EPS)", "Su yalıtımı ve membran uygulaması", "Kiremit aktarma ve onarım", "Çatı iskelesi ve güvenlik önlemleri"],
+      },
+    ],
+  },
+  {
+    id: "kaplama",
+    slug: "kaplama-uygulamalari",
+    title: "Kaplama Uygulamaları",
+    description: "Zemin ve duvarlarda seramik, mermer ve şap ile estetik ve dayanıklı kaplama çözümleri.",
+    icon: "🧱",
+    items: [
+      {
+        title: "Seramik Uygulaması",
+        shortDesc: "Banyo, mutfak ve ıslak hacimlerde seramik ve fayans kaplama.",
+        longDesc: "Banyo, mutfak, balkon ve ıslak hacimlerde seramik kaplamayı hassas terazide ve estetik derz aralıklarıyla uyguluyoruz. Su yalıtımı, eğim ve derz dolgu detayları eksiksiz tamamlanır. Metro, hexagon ve balıksırtı gibi modern desenlerde uygulama yapılır, köşe profilleri ve silikon detayları ile kusursuz bitirim sağlanır.",
+        benefits: ["Su yalıtımı ve eğimli döşeme", "Modern desen ve derz uygulaması", "Köşe profili ve silikon bitirim", "Kaymaz ve kolay temizlenen yüzey"],
+      },
+      {
+        title: "Mermer Uygulaması",
+        shortDesc: "Basamak, tezgah, denizlik ve zemin mermer kaplama.",
+        longDesc: "Doğal mermerin zarafetini yaşam alanlarınıza taşıyoruz. Basamak, denizlik, tezgah, şömine ve zemin kaplamalarında ocaktan seçilmiş mermerler ölçüsünde kesilir, cilalanır ve monte edilir. Emprenye ve parlatma ile leke ve çizilmeye karşı koruma sağlanır, uzun yıllar ilk günkü görünüm korunur.",
+        benefits: ["Basamak, denizlik ve tezgah kaplama", "Cilalı ve honlu yüzey seçenekleri", "Emprenye ile leke koruması", "Özel kesim ve desen uyumu"],
+      },
+      {
+        title: "Şap Uygulaması",
+        shortDesc: "Tesviye, eğim ve ısı yalıtımlı şap uygulamaları.",
+        longDesc: "Seramik, parke ve mermer öncesi zemini kusursuz hale getiren şap uygulamalarını lazer terazide gerçekleştiriyoruz. Tesviye şapı, eğim şapı ve şap üstü ısı/ses yalıtımı seçenekleriyle alt zemin sağlamlaştırılır. Hızlı kuruyan ve çatlamaya dirençli harçlarla zaman kaybı olmadan kaplamaya hazır hale getirilir.",
+        benefits: ["Lazer terazide tesviye şapı", "Islak hacim eğim şapı", "Çatlak önleyici fiber katkılı harç", "Hızlı kuruma ve kaplamaya hazır teslim"],
+      },
+      {
+        title: "İnce İşçilik Uygulaması",
+        shortDesc: "Süpürgelik, silikon, derz ve detay tamamlama işçilikleri.",
+        longDesc: "Kaba imalat sonrası farkı ortaya koyan ince işçilik detaylarını titizlikle tamamlıyoruz. Süpürgelik montajı, silikon çekimi, derz yenileme, fuga, mastik ve birleşim detayları milimetrik hassasiyetle yapılır. Tüm yüzeyler temiz teslim edilir, göz yoran kusurlar ortadan kalkar ve mekan profesyonel bir bitirim kazanır.",
+        benefits: ["Süpürgelik ve kartonpiyer montajı", "Silikon, mastik ve derz yenileme", "Kapı, pencere birleşim detayları", "Temiz ve kusursuz bitirim teslimi"],
+      },
+    ],
+  },
+  {
+    id: "metal-ahsap",
+    slug: "metal-ahsap-uygulamalari",
+    title: "Metal & Ahşap Uygulamaları",
+    description: "Paslanmaz, demir ve mobilya imalatında ölçüye özel dayanıklı çözümler.",
+    icon: "🔨",
+    items: [
+      {
+        title: "Paslanmaz Uygulaması",
+        shortDesc: "Korkuluk, küpeşte, tezgah ve dekoratif paslanmaz imalat.",
+        longDesc: "Paslanmaz çelikte estetik ve dayanıklılığı bir arada sunuyoruz. Merdiven korkuluğu, balkon küpeştesi, bahçe kapısı, mutfak tezgahı ve banyo aksesuarlarında 304 kalite paslanmaz malzeme kullanılır. Hassas kaynak ve polisaj ile pürüzsüz, lekesiz ve uzun ömürlü yüzeyler elde edilir, dış mekanda paslanma yapmaz.",
+        benefits: ["304 kalite paslanmaz malzeme", "Korkuluk, küpeşte ve kapı imalatı", "Hassas kaynak ve ayna polisaj", "Dış mekanda paslanmaz garanti"],
+      },
+      {
+        title: "Demir Kaynak Uygulaması",
+        shortDesc: "Taşıyıcı, korkuluk ve özel demir doğrama kaynak işçiliği.",
+        longDesc: "Taşıyıcı konstrüksiyon, ferforje korkuluk, kapı, pencere korkuluğu ve özel demir doğramalarda profesyonel kaynak işçiliği sunuyoruz. Elektro ve gaz altı kaynağı ile sağlam birleşimler oluşturulur, antipas ve boya ile koruma sağlanır. Statik gerektiren işlerde projeye uygun kesit ve detay hesaplanır.",
+        benefits: ["Elektro ve gaz altı kaynak", "Taşıyıcı ve korkuluk imalatı", "Antipas ve fırın boya koruması", "Projeye uygun statik kesit"],
+      },
+      {
+        title: "Mobilya Uygulaması",
+        shortDesc: "Ölçüye özel mutfak, dolap, vestiyer ve ahşap mobilya imalatı.",
+        longDesc: "Ev ve ofislerinize özel ölçülerde mobilya imalatı yapıyoruz. Mutfak dolabı, vestiyer, gömme dolap, TV ünitesi ve banyo dolaplarında lake, membran ve ahşap kaplama seçenekleri sunulur. Ray, menteşe ve aksesuarlarda birinci sınıf donanım kullanılır, montaj sonrası ayar ve hizalama ile sorunsuz kullanım sağlanır.",
+        benefits: ["Ölçüye özel mutfak ve dolap imalatı", "Lake, membran ve ahşap kaplama", "Frenli ray ve soft-close menteşe", "Yerinde montaj ve ayarlı teslim"],
       },
     ],
   },

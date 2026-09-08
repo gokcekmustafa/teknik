@@ -4,16 +4,16 @@ import Link from 'next/link';
 import { useState } from 'react';
 import { services } from '@/app/data/services';
 
-const service = services.find(s => s.slug === 'iklimlendirme-tesisat')!;
+const service = services.find(s => s.slug === 'metal-ahsap-uygulamalari')!;
 
 const faqs = [
-  { q: "Kombi bakımı ne sıklıkla yapılmalıdır?", a: "Kombinizin yılda en az bir kez, tercihen kış sezonu öncesinde bakımdan geçmesini öneriyoruz. Düzenli bakım yakıt tasarrufu sağlar ve arıza riskini azaltır." },
-  { q: "Klima montajı için duvar tipi mi kaset tipi mi önerirsiniz?", a: "Duvar tipi klimalar evler için idealdir. Kaset tipi klimalar daha çok tavan arasına monte edilir ve ofis, restoran gibi geniş alanlarda tercih edilir. İhtiyacınıza en uygun çözümü yerinde keşif sonrası belirliyoruz." },
-  { q: "Tesisat kaçağı nasıl tespit edilir?", a: "Termal kamera, nem ölçer ve basınç testi gibi profesyonel ekipmanlarla noktasal tespit yapıyoruz. Duvarları kırmadan veya fazla hasar vermeden kaçağın kaynağını buluyoruz." },
-  { q: "Havuz pompası ne kadar dayanır?", a: "Kaliteli bir havuz pompası düzenli bakımla 8-12 yıl arası kullanılabilir. Periyodik bakım ve kışlama işlemleri pompa ömrünü uzatır." },
+  { q: "Paslanmaz ve demir arasında hangisi daha dayanıklı?", a: "Paslanmaz dış mekanda paslanmadığı için balkon ve bahçe için idealdir. Demir ise taşıyıcı ve ferforje işlerde daha ekonomiktir, boyayla korunur." },
+  { q: "Mobilya imalatı ne kadar sürer?", a: "Ölçü alındıktan sonra mutfak ve dolap imalatı 10-15 gün içinde tamamlanıp monte edilir. Lake ve membran kaplama süreyi bir kaç gün uzatabilir." },
+  { q: "Paslanmaz korkuluk paslanır mı?", a: "304 kalite paslanmaz doğru polisajla paslanmaz. Kaynak yerleri özel solüsyonla temizlenir ve yıllarca ilk günkü görünümünü korur." },
+  { q: "Demir kaynak işlerinde garanti var mı?", a: "Tüm kaynak ve boya işçiliği 2 yıl garantilidir. Taşıyıcı imalatlarda statik hesaba uygun kesit kullanılır." },
 ];
 
-export default function IklimlendirmeTesisatPage() {
+export default function MetalAhsapPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [activeItem, setActiveItem] = useState<number | null>(null);
 
@@ -56,6 +56,7 @@ export default function IklimlendirmeTesisatPage() {
           {service.items.map((item, idx) => (
             <div
               key={idx}
+              id={`item-${idx}`}
               className={`scroll-mt-24 transition-all duration-500 ${activeItem === null || activeItem === idx ? 'opacity-100' : 'opacity-30'}`}
             >
               <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
@@ -123,7 +124,7 @@ export default function IklimlendirmeTesisatPage() {
           <p className="mt-4 text-zinc-300 text-sm">Uzman ekibimiz yerinde inceleme yaparak size özel çözüm sunsun.</p>
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/#kesif-asistani"
+              href="/kesif-asistani"
               className="px-8 py-4 bg-amber-500 hover:bg-amber-600 text-zinc-950 font-extrabold rounded-lg shadow-lg shadow-amber-500/25 transition-all hover:shadow-xl hover:-translate-y-0.5 text-center tracking-wide uppercase text-sm"
             >
               Keşif Asistanını Başlat

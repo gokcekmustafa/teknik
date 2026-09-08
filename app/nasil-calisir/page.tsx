@@ -137,8 +137,8 @@ export default function NasilCalisirPage() {
             <Link href="/kesif-asistani" className="px-8 py-4 bg-amber-500 hover:bg-amber-600 text-zinc-950 font-extrabold rounded-lg shadow-lg shadow-amber-500/25 transition-all hover:shadow-xl hover:-translate-y-0.5 text-center tracking-wide uppercase text-sm">
               Keşif Asistanını Başlat
             </Link>
-            <a href="tel:+902128927502" className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-bold rounded-lg transition-all hover:-translate-y-0.5 text-center text-sm">
-              0212 892 75 02
+            <a href="tel:+905414659932" className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-sm border border-white/20 text-white font-bold rounded-lg transition-all hover:-translate-y-0.5 text-center text-sm">
+              0541 465 99 32
             </a>
           </div>
         </div>
