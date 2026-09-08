@@ -22,7 +22,7 @@ export default function SartlarPage() {
 
             <div>
               <h2 className="text-lg font-black text-zinc-900 uppercase tracking-wide mb-3">2. Fikri Mülkiyet</h2>
-              <p>Sitede yer alan tüm metin, görsel, logo ve içerikler Gespa Elektronik Pazarlama Sanayi ve Dış Tic.Ltd.Şti.&apos;ye aittir. İzinsiz kullanımı, çoğaltılması veya dağıtılması yasaktır.</p>
+              <p>Sitede yer alan tüm metin, görsel, logo ve içerikler BBB İnşaat Ltd. Şti.&apos;ye aittir. İzinsiz kullanımı, çoğaltılması veya dağıtılması yasaktır.</p>
             </div>
 
             <div>

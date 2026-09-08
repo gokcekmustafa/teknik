@@ -17,7 +17,7 @@ export default function SozlesmePage() {
 
             <div>
               <h2 className="text-lg font-black text-zinc-900 uppercase tracking-wide mb-3">1. Taraflar</h2>
-              <p>İşbu sözleşme, aşağıda bilgileri yer alan <strong>Gespa Elektronik Pazarlama Sanayi ve Dış Tic.Ltd.Şti.</strong> (bundan böyle &quot;Firma&quot; olarak anılacaktır) ile hizmet alan müşteri (bundan böyle &quot;Müşteri&quot; olarak anılacaktır) arasında akdedilmiştir.</p>
+              <p>İşbu sözleşme, aşağıda bilgileri yer alan <strong>BBB İnşaat Ltd. Şti.</strong> (bundan böyle &quot;Firma&quot; olarak anılacaktır) ile hizmet alan müşteri (bundan böyle &quot;Müşteri&quot; olarak anılacaktır) arasında akdedilmiştir.</p>
             </div>
 
             <div>

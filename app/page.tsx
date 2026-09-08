@@ -641,14 +641,14 @@ export default function App() {
                   </a>
                 </li>
                 <li className="flex items-center gap-2.5"><span className="w-7 h-7 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center flex-shrink-0"><svg className="w-3.5 h-3.5 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg></span><a href={`mailto:${siteContent.email}`} className="hover:text-amber-500 transition font-medium">{siteContent.email}</a></li>
-                <li className="text-[10px] text-zinc-500 pt-1 border-t border-white/5 mt-1">Gespa Elektronik Pazarlama Sanayi ve Dış Tic.Ltd.Şti.</li>
+                <li className="text-[10px] text-zinc-500 pt-1 border-t border-white/5 mt-1">BBB İnşaat Ltd. Şti.</li>
               </ul>
             </div>
 
           </div>
 
           <div className="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-zinc-500">
-            <span>© 2026 BBB İnşaat · Gespa Elektronik Pazarlama Sanayi ve Dış Tic.Ltd.Şti. Tüm hakları saklıdır.</span>
+            <span>© 2026 BBB İnşaat Ltd. Şti. Tüm hakları saklıdır.</span>
             <div className="flex gap-6">
               <Link href="/sozlesme" className="hover:text-white transition cursor-pointer">Hizmet Sözleşmesi</Link>
               <Link href="/sartlar" className="hover:text-white transition cursor-pointer">Hükümler & Şartlar</Link>
