@@ -9,6 +9,16 @@ const ACCESS_KEY = 'c487cfcb-24cc-45e3-a0e7-2e3d4e44d991';
 
 const services = [
   {
+    id: "taahhut",
+    title: "İnşaat Taahhüt",
+    description: "Kaba inşaattan anahtar teslime villa, daire ve ticari alanlarda proje bazlı taahhüt.",
+    items: [
+      "Anahtar Teslim İnşaat & Tadilat",
+      "Kaba İnşaat & Betonarme Uygulamaları",
+      "Proje Yönetimi & Şantiye Taahhüdü"
+    ]
+  },
+  {
     id: "enerji",
     title: "Enerji & Aydınlatma",
     description: "Villa ve dairelerinize modern enerji altyapısı ve estetik aydınlatma montajları.",
@@ -158,15 +168,15 @@ export default function App() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             <div className="lg:col-span-7">
-              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded bg-white/5 border border-white/10 text-xs font-bold text-amber-400 uppercase tracking-widest mb-6 animate-fade-in-up">
-                <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" /> BBB İnşaat Çözümleri
+              <span className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded bg-amber-500/10 border border-amber-500/20 text-xs font-bold text-amber-400 uppercase tracking-widest mb-6 animate-fade-in-up">
+                <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" /> İnşaat Taahhüt & Anahtar Teslim Çözümler
               </span>
               <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight text-white leading-tight animate-fade-in-up animate-delay-100">
-                Mülkünüzün Tüm <br />
-                Teknik İşleri <span className="text-amber-500">Tek Elden Güvende.</span>
+                İnşaat Taahhüt ve <br />
+                Tüm Teknik İşler <span className="text-amber-500">Tek Elden Güvende.</span>
               </h1>
               <p className="mt-6 text-base sm:text-lg text-zinc-300 max-w-xl leading-relaxed animate-fade-in-up animate-delay-200">
-                Usta arayarak vakit kaybetmeyin. Elektrikli şarj istasyonu kurulumundan çatı izolasyonuna, bahçe kapı otomasyonundan ince işçilik boya ve seramik uygulamalarına kadar tüm ihtiyaçları sertifikalı uzman kadromuz ve yazılı iş garantimizle çözüyoruz.
+                Kaba inşaattan anahtar teslime — villa, daire ve ticari alanlarda proje bazlı taahhüt. Elektrik, tesisat, kaplama ve ince işçilik dahil tüm imalatlar tek sözleşme, tek muhatap ve yazılı teslim garantisiyle yönetilir.
               </p>
               
               <div className="mt-10 flex flex-col gap-4 animate-fade-in-up animate-delay-300">
@@ -223,6 +233,40 @@ export default function App() {
           </div>
         </div>
       </header>
+
+      <section className="bg-white border-b border-zinc-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-zinc-100">
+            <div className="flex items-center justify-center gap-3 py-4 sm:py-5">
+              <span className="w-9 h-9 rounded-xl bg-amber-500/10 border border-amber-500/15 flex items-center justify-center flex-shrink-0">
+                <svg className="w-4 h-4 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              </span>
+              <div className="text-left">
+                <p className="text-xs font-black text-zinc-900 uppercase tracking-widest">Yazılı Taahhüt</p>
+                <p className="text-[11px] text-zinc-500">Sözleşmeli, net metraj & hakediş</p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center gap-3 py-4 sm:py-5">
+              <span className="w-9 h-9 rounded-xl bg-[#2d3140] flex items-center justify-center flex-shrink-0">
+                <svg className="w-4 h-4 text-amber-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2h5m5 0h2a2 2 0 002-2v-5a2 2 0 00-2-2h-2m-5 0V9m0 0l3 3m-3-3l-3 3" /></svg>
+              </span>
+              <div className="text-left">
+                <p className="text-xs font-black text-zinc-900 uppercase tracking-widest">Anahtar Teslim</p>
+                <p className="text-[11px] text-zinc-500">Kaba inşaattan ince işçiliğe tek el</p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center gap-3 py-4 sm:py-5">
+              <span className="w-9 h-9 rounded-xl bg-amber-500/10 border border-amber-500/15 flex items-center justify-center flex-shrink-0">
+                <svg className="w-4 h-4 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+              </span>
+              <div className="text-left">
+                <p className="text-xs font-black text-zinc-900 uppercase tracking-widest">Proje Teslim Garantisi</p>
+                <p className="text-[11px] text-zinc-500">İş programına uyumlu, zamanında teslim</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* */}
       <section id="neden-biz" className="py-16 sm:py-20 bg-white border-b border-zinc-100">
@@ -289,11 +333,12 @@ export default function App() {
             {filteredServices.map((service) => (
               <div 
                 key={service.id} 
-                className="bg-white rounded-xl border border-zinc-200/80 p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between relative group"
+                className={`bg-white rounded-xl border p-6 sm:p-8 shadow-sm hover:shadow-xl hover:-translate-y-0.5 transition-all duration-300 flex flex-col justify-between relative group ${service.id === 'taahhut' ? 'border-amber-200 bg-amber-50/30 shadow-amber-500/5' : 'border-zinc-200/80'}`}
               >
                 <div className="absolute top-4 left-0 w-1 h-8 bg-amber-500 rounded-r group-hover:h-12 transition-all duration-300" />
                 
                 <div className="pl-4">
+                  {service.id === 'taahhut' && <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500 text-zinc-950 text-[10px] font-black uppercase tracking-widest mb-3">★ Öne Çıkan — Taahhüt</span>}
                   <h3 className="text-xl font-black text-zinc-900 uppercase tracking-wide flex items-center gap-2">
                     <span className="w-2.5 h-2.5 bg-amber-500 rounded-sm inline-block" />
                     {service.title}

@@ -16,6 +16,33 @@ export interface Service {
 
 export const services: Service[] = [
   {
+    id: "taahhut",
+    slug: "insaat-taahhut",
+    title: "İnşaat Taahhüt",
+    description: "Kaba inşaattan anahtar teslime villa, daire ve ticari alanlarda proje bazlı taahhüt.",
+    icon: "🏢",
+    items: [
+      {
+        title: "Anahtar Teslim İnşaat & Tadilat",
+        shortDesc: "Proje, ruhsat ve tüm imalatlar dahil anahtar teslim taahhüt.",
+        longDesc: "Villa, daire ve ticari alanlarda anahtar teslim taahhüt üstleniyoruz. Proje ve ruhsat süreçlerinden kaba inşaat, tesisat, kaplama ve ince işçiliğe kadar tüm imalatlar tek sözleşme ve tek muhatapla yönetilir. Keşif sonrası net metraj, malzeme listesi ve iş programı hazırlanır, yazılı taahhüt ile zamanında teslim edilir.",
+        benefits: ["Tek sözleşme, tek muhatap", "Proje ve metrajlı keşif", "Tüm imalatlar dahil anahtar teslim", "Yazılı teslim süresi garantisi"],
+      },
+      {
+        title: "Kaba İnşaat & Betonarme Uygulamaları",
+        shortDesc: "Temel, perde, kolon-kiriş ve döşeme betonarme imalatları.",
+        longDesc: "Kaba inşaat aşamasında temel, perde duvar, kolon, kiriş ve döşeme betonarme imalatlarını projeye uygun şekilde gerçekleştiriyoruz. Demir, kalıp ve beton ekipleri koordineli çalışır, şantiye şefi kontrolünde kot, aks ve donatı detayları hassasiyetle uygulanır. Su yalıtımı ve şap ile kaba inşaat eksiksiz kapatılır.",
+        benefits: ["Projeye uygun betonarme imalat", "Demir-kalıp-beton koordinasyonu", "Aks, kot ve donatı kontrolü", "Su yalıtımlı kaba teslim"],
+      },
+      {
+        title: "Proje Yönetimi & Şantiye Taahhüdü",
+        shortDesc: "İş programı, hakediş ve saha koordinasyonu ile taahhüt yönetimi.",
+        longDesc: "Taahhüt işlerinde iş programı, hakediş, satın alma ve saha koordinasyonunu profesyonelce yönetiyoruz. Günlük saha raporu, haftalık ilerleme takibi ve malzeme sevkiyat planıyla şantiye tertibi korunur. Tüm alt yükleniciler BBB İnşaat sorumluluğunda tek elden koordine edilir, bütçe ve süre kontrol altında tutulur.",
+        benefits: ["İş programı ve hakediş takibi", "Alt yüklenici tek elden yönetimi", "Günlük saha raporu ve kontrol", "Bütçe ve süre garantisi"],
+      },
+    ],
+  },
+  {
     id: "enerji",
     slug: "enerji-aydinlatma",
     title: "Enerji & Aydınlatma",
