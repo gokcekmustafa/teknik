@@ -338,7 +338,6 @@ export default function App() {
                 <div className="absolute top-4 left-0 w-1 h-8 bg-amber-500 rounded-r group-hover:h-12 transition-all duration-300" />
                 
                 <div className="pl-4">
-                  {service.id === 'taahhut' && <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-amber-500 text-zinc-950 text-[10px] font-black uppercase tracking-widest mb-3">★ Öne Çıkan — Taahhüt</span>}
                   <h3 className="text-xl font-black text-zinc-900 uppercase tracking-wide flex items-center gap-2">
                     <span className="w-2.5 h-2.5 bg-amber-500 rounded-sm inline-block" />
                     {service.title}
