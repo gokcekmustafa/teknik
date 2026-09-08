@@ -1,10 +1,12 @@
-import gallery from "@/data/gallery.json";
-
-export const dynamic = "force-static";
+'use client';
+import { useState } from 'react';
+import gallery from '@/data/gallery.json';
 
 export default function GaleriPage() {
   const items = gallery as { id: string; src: string; category: string; title: string }[];
   const categories = Array.from(new Set(items.map((x) => x.category)));
+  const [active, setActive] = useState('TÜMÜ');
+  const filtered = active === 'TÜMÜ' ? items : items.filter((x) => x.category === active);
 
   return (
     <div className="min-h-screen bg-zinc-50 text-zinc-900 antialiased font-sans">
@@ -25,18 +27,17 @@ export default function GaleriPage() {
             </div>
           ) : (
             <>
-              {categories.length > 1 && (
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {categories.map((c) => (
-                    <span key={c} className="px-3 py-1.5 bg-white border border-zinc-200 rounded-lg text-xs font-bold uppercase tracking-wider text-zinc-600">{c}</span>
-                  ))}
-                </div>
-              )}
+              <div className="flex flex-wrap gap-2 mb-8">
+                <button onClick={() => setActive('TÜMÜ')} className={`px-3 py-1.5 border rounded-lg text-xs font-bold uppercase tracking-wider transition ${active === 'TÜMÜ' ? 'bg-[#2d3140] text-amber-500 border-[#2d3140] shadow-md' : 'bg-white border-zinc-200 text-zinc-600 hover:border-zinc-300 hover:text-zinc-900'}`}>TÜMÜ</button>
+                {categories.map((c) => (
+                  <button key={c} onClick={() => setActive(c)} className={`px-3 py-1.5 border rounded-lg text-xs font-bold uppercase tracking-wider transition ${active === c ? 'bg-amber-500 text-zinc-950 border-amber-500 shadow-md' : 'bg-white border-zinc-200 text-zinc-600 hover:border-zinc-300 hover:text-zinc-900'}`}>{c}</button>
+                ))}
+              </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                {items.map((it) => (
+                {filtered.map((it) => (
                   <div key={it.id} className="group bg-white rounded-xl border border-zinc-200 overflow-hidden shadow-sm hover:shadow-lg transition">
                     <div className="aspect-[4/3] bg-zinc-100 overflow-hidden">
-                      <img src={it.src} alt={it.title} className="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" />
+                      <img src={it.src} alt={it.category} className="w-full h-full object-cover group-hover:scale-105 transition duration-500" loading="lazy" />
                     </div>
                     <div className="p-3">
                       <span className="text-[10px] font-bold text-amber-600 uppercase tracking-widest">{it.category}</span>
@@ -44,6 +45,7 @@ export default function GaleriPage() {
                   </div>
                 ))}
               </div>
+              {filtered.length === 0 && <p className="text-center text-sm text-zinc-500 mt-8">Bu kategoride fotoğraf yok.</p>}
             </>
           )}
         </div>
