@@ -30,11 +30,11 @@ export default function Header() {
                   <div className="absolute top-0 left-0 w-6 h-6 bg-[#6b7294] rounded" />
                   <div className="absolute bottom-0 right-0 w-6 h-6 bg-[#2d3140] rounded" />
                   <div className="absolute top-1.5 left-1.5 w-6 h-6 bg-amber-500 rounded transform rotate-12 flex items-center justify-center text-white text-xs font-black shadow-md">
-                    G
+                    B
                   </div>
                 </div>
                 <span className="text-xl sm:text-2xl font-black tracking-tight text-zinc-900">
-                  Profesyonel<span className="text-amber-500 font-bold ml-0.5">TEKNİK</span>
+                  BBB<span className="text-amber-500 font-bold ml-0.5">İnşaat</span>
                 </span>
               </Link>
             </div>

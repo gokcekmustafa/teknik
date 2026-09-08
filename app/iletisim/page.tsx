@@ -19,7 +19,7 @@ export default function IletisimPage() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         access_key: ACCESS_KEY,
-        subject: 'İletişim Formu - Profesyonel Teknik',
+        subject: 'İletişim Formu - BBB İnşaat',
         from_name: form.name,
         name: form.name,
         phone: form.phone,
@@ -172,7 +172,7 @@ export default function IletisimPage() {
                       </div>
                       <div>
                         <span className="block text-xs font-bold text-zinc-500 uppercase tracking-wider">E-posta</span>
-                        <a href="mailto:bilgi@profesyonelteknik.com" className="text-sm text-zinc-800 font-medium hover:text-amber-500 transition">bilgi@profesyonelteknik.com</a>
+                        <a href="mailto:bilgi@bbbinsaat44.com" className="text-sm text-zinc-800 font-medium hover:text-amber-500 transition">bilgi@bbbinsaat44.com</a>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">

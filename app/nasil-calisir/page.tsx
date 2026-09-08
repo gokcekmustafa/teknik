@@ -55,7 +55,7 @@ export default function NasilCalisirPage() {
           <span className="text-xs font-bold text-amber-400 uppercase tracking-widest">Çalışma Disiplinimiz</span>
           <h1 className="text-4xl sm:text-5xl font-black tracking-tight mt-2">Süreç Nasıl İlerler?</h1>
           <p className="mt-4 text-zinc-300 max-w-2xl min-h-[3rem]">
-            Geleneksel, yarım bırakılan iş süreçlerini unutun. Profesyonel Teknik ile her şey planlı, yazılı ve profesyoneldir.
+            Geleneksel, yarım bırakılan iş süreçlerini unutun. BBB İnşaat ile her şey planlı, yazılı ve profesyoneldir.
           </p>
         </div>
       </section>

@@ -7,7 +7,7 @@ export default function SozlesmePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <Link href="/" className="text-xs font-bold text-zinc-400 hover:text-amber-400 uppercase tracking-wider transition">← Anasayfa</Link>
           <h1 className="text-4xl sm:text-5xl font-black tracking-tight mt-2">Hizmet Sözleşmesi</h1>
-          <p className="mt-4 text-zinc-300 max-w-2xl min-h-[3rem]">Profesyonel Teknik olarak sunduğumuz hizmetlere ilişkin sözleşme koşulları.</p>
+          <p className="mt-4 text-zinc-300 max-w-2xl min-h-[3rem]">BBB İnşaat olarak sunduğumuz hizmetlere ilişkin sözleşme koşulları.</p>
         </div>
       </section>
 

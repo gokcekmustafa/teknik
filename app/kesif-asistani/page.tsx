@@ -43,7 +43,7 @@ export default function KesifAsistaniPage() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         access_key: ACCESS_KEY,
-        subject: 'Keşif Talebi - Profesyonel Teknik',
+        subject: 'Keşif Talebi - BBB İnşaat',
         from_name: clientInfo.name,
         name: clientInfo.name,
         phone: clientInfo.phone,

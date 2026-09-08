@@ -38,11 +38,11 @@ export default function HakkimizdaPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <span className="text-xs font-bold text-amber-500 uppercase tracking-widest">Biz Kimiz?</span>
-              <h2 className="text-3xl font-black text-zinc-900 uppercase tracking-wide mt-2">Profesyonel Teknik</h2>
+              <h2 className="text-3xl font-black text-zinc-900 uppercase tracking-wide mt-2">BBB İnşaat</h2>
               <p className="text-xs text-zinc-400 mt-1">Gespa Elektronik Pazarlama Sanayi ve Dış Tic.Ltd.Şti.</p>
               <div className="mt-6 space-y-4 text-zinc-600 leading-relaxed text-sm">
                 <p>
-                  Profesyonel Teknik olarak, villa ve daire sahiplerinin ihtiyaç duyduğu tüm teknik servis hizmetlerini tek bir çatı altında topluyoruz. Elektrikli araç şarj istasyonu kurulumundan çatı izolasyonuna, klima montajından bahçe peyzaj aydınlatmasına kadar geniş bir yelpazede hizmet veriyoruz.
+                  BBB İnşaat olarak, villa ve daire sahiplerinin ihtiyaç duyduğu tüm teknik servis hizmetlerini tek bir çatı altında topluyoruz. Elektrikli araç şarj istasyonu kurulumundan çatı izolasyonuna, klima montajından bahçe peyzaj aydınlatmasına kadar geniş bir yelpazede hizmet veriyoruz.
                 </p>
                 <p>
                   Sektördeki yılların deneyimiyle, müşterilerimize &quot;tek muhatap, net fiyat, garantili işçilik&quot; prensibiyle yaklaşıyoruz. Usta arayarak vakit kaybetmenize gerek yok. Tüm süreçleri planlıyor, yazılı sözleşmeyle güvence altına alıyor ve zamanında teslim ediyoruz.
@@ -61,7 +61,7 @@ export default function HakkimizdaPage() {
                 Mülkünüzün tüm teknik işlerini tek elden, güvenle ve profesyonelce çözüyoruz.
               </p>
               <div className="mt-6 pt-6 border-t border-white/10">
-                <p className="font-bold text-amber-400">Profesyonel Teknik Ekibi</p>
+                <p className="font-bold text-amber-400">BBB İnşaat Ekibi</p>
               </div>
             </div>
           </div>

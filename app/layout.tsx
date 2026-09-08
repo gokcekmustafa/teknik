@@ -14,11 +14,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Profesyonel Teknik | Villa & Daire Teknik Servis",
+  title: "BBB İnşaat | Villa & Daire Teknik Servis",
   description:
     "Villa ve daireleriniz için elektrik, tesisat, otomasyon, yalıtım ve ince işçilik hizmetleri. Sertifikalı usta kadrosu ve yazılı iş garantisi.",
   openGraph: {
-    title: "Profesyonel Teknik | Villa & Daire Teknik Servis",
+    title: "BBB İnşaat | Villa & Daire Teknik Servis",
     description:
       "Villa ve daireleriniz için profesyonel teknik servis çözümleri.",
     type: "website",
